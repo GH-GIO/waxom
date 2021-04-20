@@ -330,19 +330,29 @@ window.addEventListener('scroll', (e) => {
 
     let scrollHeight = window.pageYOffset
 
-    if (scrollHeight > 1) {
-        nav.classList.add('nav_active');
 
-    } else {
-        nav.classList.remove('nav_active')
+
+    scrollHeight > 1 ? nav.classList.add('nav_active') : nav.classList.remove('nav_active')
+    // window.innerWidth
+    if (window.pageYOffset < 1 && window.innerWidth <= 800) {
+        ul.style.backgroundColor = 'transparent';
+        ul.style.boxShadow = "none"
+
+    } else if (window.pageYOffset > 1 && window.innerWidth <= 800) {
+        ul.style.backgroundColor = 'white';
+        ul.style.boxShadow = "0 3px 6px  rgba(0, 0, 0, 0.2)"
 
     }
-
 
 })
 
 
-// menu-scroll 
+
+
+
+
+
+// menu - scroll
 
 
 const navBtn = document.querySelector('.bar_icon');
@@ -350,3 +360,30 @@ const navBtn = document.querySelector('.bar_icon');
 navBtn.addEventListener('click', () => {
     ul.classList.toggle('ul_active')
 })
+
+
+
+///text
+
+// const questions = document.querySelectorAll(".section_7_item");
+
+
+// questions.forEach(function (question) {
+//     const btn = question.querySelector(".dropdown-btn")
+//     const questionTxt = question.querySelector('.section_7_items_text')
+//     btn.addEventListener('click', () => {
+//         questions.forEach((item) => {
+//             let newQuestionTxt = item.querySelector('.section_7_items_text')
+//             if (newQuestionTxt !== question) {
+//                 newQuestionTxt.classList.remove("show_text")
+//             }
+
+//         });
+
+//         questionTxt.classList.toggle("show_text")
+
+//     })
+
+
+
+// })

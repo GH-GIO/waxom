@@ -29,9 +29,12 @@
 .ul_active{
 transition: $fast_transition;
 opacity: 1 !important;
-height: 200px !important;
+bottom:0 !important;
+transition: $transition;
 
 }
+
+
 //   .a_active:hover{
 //     color: $icon-hover-color;
 //     transition: $transition;
@@ -647,9 +650,10 @@ height: 200px !important;
            
 
             .section_7_item{
-                display: flex;
-                margin-bottom: 10px;
-
+                
+      .section_7_items_title{
+        display: flex;
+        margin-bottom: 10px;
                 & > p {
                     font-size: $small-font;
                 }
@@ -661,6 +665,23 @@ height: 200px !important;
                     svg{
                         font-size: 16px;
                         color: $arrow-color;
+                    }
+                }
+            }
+
+            .show_text{
+                height: 32px !important ;
+                opacity: 1 !important;
+                transition: $fast_transition;
+            }
+                .section_7_items_text{
+                    height: 0;
+                    opacity: 0;
+                    margin-bottom: 20px;
+                    transition: $fast_transition;
+                    p{
+                        font-size: 14px;
+                        color: $button-color;
                     }
                 }
             }

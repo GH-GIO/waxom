@@ -145,18 +145,18 @@ section {
   }
   #nav .nav_menu ul {
     opacity: 0;
-    height: 0;
+    height: 200px;
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: 500%;
     left: 0;
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
     display: block !important;
-    background-color: white !important;
-    -webkit-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
-            box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: none;
+            box-shadow: none;
     padding: 10px 0;
+    z-index: -1;
   }
   #nav .nav_menu ul .last_li {
     display: none !important;
@@ -166,6 +166,7 @@ section {
   }
   #nav .nav_menu ul li a {
     font-size: 16px !important;
+    z-index: -1;
   }
   #section_1 .select_1_center {
     width: 50% !important;
@@ -334,7 +335,9 @@ section {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   opacity: 1 !important;
-  height: 200px !important;
+  bottom: 0 !important;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #nav {
@@ -982,26 +985,46 @@ section {
   padding-left: 30px;
 }
 
-#section_7 .section_7_content .section_7_content_text .section_7_items .section_7_item {
+#section_7 .section_7_content .section_7_content_text .section_7_items .section_7_item .section_7_items_title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
 }
 
-#section_7 .section_7_content .section_7_content_text .section_7_items .section_7_item > p {
+#section_7 .section_7_content .section_7_content_text .section_7_items .section_7_item .section_7_items_title > p {
   font-size: 14px;
 }
 
-#section_7 .section_7_content .section_7_content_text .section_7_items .section_7_item .dropdown-btn {
+#section_7 .section_7_content .section_7_content_text .section_7_items .section_7_item .section_7_items_title .dropdown-btn {
   margin-right: 10px;
   background-color: transparent;
   cursor: pointer;
 }
 
-#section_7 .section_7_content .section_7_content_text .section_7_items .section_7_item .dropdown-btn svg {
+#section_7 .section_7_content .section_7_content_text .section_7_items .section_7_item .section_7_items_title .dropdown-btn svg {
   font-size: 16px;
   color: #c58713;
+}
+
+#section_7 .section_7_content .section_7_content_text .section_7_items .section_7_item .show_text {
+  height: 32px !important;
+  opacity: 1 !important;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#section_7 .section_7_content .section_7_content_text .section_7_items .section_7_item .section_7_items_text {
+  height: 0;
+  opacity: 0;
+  margin-bottom: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#section_7 .section_7_content .section_7_content_text .section_7_items .section_7_item .section_7_items_text p {
+  font-size: 14px;
+  color: #998675;
 }
 
 #section_8 {
